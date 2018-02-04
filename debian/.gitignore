@@ -1,0 +1,6 @@
+/.debhelper
+/ilms7
+/debhelper-*
+/*.debhelper.log
+/*.substvars
+/files

@@ -1,0 +1,16 @@
+diff -rupN ilms7-7.1.20.25.orig/src/mei/MEILinux.cpp ilms7-7.1.20.25/src/mei/MEILinux.cpp
+--- ilms7-7.1.20.25.orig/src/mei/MEILinux.cpp	2011-05-23 11:40:23.000000000 +0200
++++ ilms7-7.1.20.25/src/mei/MEILinux.cpp	2016-07-26 12:18:28.238771066 +0200
+@@ -94,7 +94,11 @@ bool MEILinux::GetMeiVersionFromSysFs(ME
+   verFile  = fopen(MEILinux::MEI_VERSION_SYSFS_FILE, "r");
+ 
+   if (verFile == NULL) {
+-      ret = false;
++      ret = true;
++      ver.major = 7;
++      ver.minor = 1;
++      ver.hotfix = 20;
++      ver.build  = 25;      
+       goto Cleanup;
+   }
+ 

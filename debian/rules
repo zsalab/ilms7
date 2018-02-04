@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+# -- Rules to build libpam-pgsql package
+
+## globals
+PACKAGE=    ilms7
+DESTDIR=    $(CURDIR)/debian/${PACKAGE}
+
+export DEB_CXXFLAGS_PREPEND="-std=c++98"
+
+override_dh_auto_configure:
+	# Build the module
+	./configure $(shell dpkg-buildflags --export=configure) --prefix=/usr
+
+%:
+	dh $@ --with autotools_dev

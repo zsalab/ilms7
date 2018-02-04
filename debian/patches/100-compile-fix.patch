@@ -1,0 +1,22 @@
+diff -rupN ilms7-7.1.20.25.orig/src/tools/ATNetworkTool.cpp ilms7-7.1.20.25/src/tools/ATNetworkTool.cpp
+--- ilms7-7.1.20.25.orig/src/tools/ATNetworkTool.cpp	2011-03-29 16:06:11.000000000 +0200
++++ ilms7-7.1.20.25/src/tools/ATNetworkTool.cpp	2016-07-26 09:56:40.481114778 +0200
+@@ -41,6 +41,7 @@
+ #include <ifaddrs.h>
+ #include <unistd.h>
+ #include <fcntl.h>
++#include <stdio.h>
+ 
+ bool ATNetworkTool::GetHostNameDomain(const char *name, std::string &domain)
+ {
+diff -rupN ilms7-7.1.20.25.orig/src/tools/ATVersion.cpp ilms7-7.1.20.25/src/tools/ATVersion.cpp
+--- ilms7-7.1.20.25.orig/src/tools/ATVersion.cpp	2011-01-11 22:43:20.000000000 +0100
++++ ilms7-7.1.20.25/src/tools/ATVersion.cpp	2016-07-26 09:57:16.217107698 +0200
+@@ -40,6 +40,7 @@
+ #include <cerrno>
+ #include <fstream>
+ #include <dirent.h>
++#include <unistd.h>
+ 
+ #define AT_VERSION_ARGUMENT "--version"
+ #define AT_VERSION_MAXSIZE 40

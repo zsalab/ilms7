@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+if [ -e /dev/mei0 ] && [ ! -e /dev/mei ]; then
+	ln -s mei0 /dev/mei
+fi
+
+exit 0

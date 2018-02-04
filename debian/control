@@ -1,0 +1,15 @@
+Source: ilms7
+Section: admin
+Priority: extra
+Maintainer: Balazs Toth <zsalab@zettasystem.com>
+Build-Depends: debhelper (>= 8.0.0), autotools-dev
+Standards-Version: 3.9.5
+Homepage: https://software.intel.com/en-us/articles/download-the-latest-intel-amt-open-source-drivers
+
+Package: ilms7
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Conflicts: ilms8
+Description: Intel® Local Manageability Service
+  The Local Manageability Service (LMS) allows applications to access the Intel® Active Management
+  Technologyfirmware via the Intel® AMT network interface.
